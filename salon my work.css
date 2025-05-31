@@ -1,0 +1,255 @@
+body {
+    background-color: #00120B; /* Roz pal delicat */
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #FDECEF; /* Mov feminin */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Aranjează vertical: header, main, footer */
+}
+
+main {
+    flex: 1; /* Umple tot spațiul rămas între header și footer */
+}
+
+
+/* Antet elegant */
+header {
+    display: flex; /* Folosește flexbox pentru a aranja elementele */
+    justify-content: space-between; /* Spațiu între logo și navigație */
+    align-items: center; /* Aliniază elementele pe verticală */
+    background-color: #9DB17C;
+    padding: 5px;
+    border-radius: 50px; /* Ușor mai rotunjit, 110px era prea mult */
+    box-shadow: 0 4px 8px rgba(255, 253, 253, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Logo stilizat */
+.logo {
+    width: 200px; /* Ajustează dimensiunea logo-ului */
+    height: auto; /* Păstrează proporțiile */
+    align-self: flex-start; /* Aliniază logo-ul în partea de sus */
+}
+
+* Bara de navigație */
+nav {
+    display: flex;
+    justify-content: center; /* Centrează elementele de navigare */
+    align-items: center;
+}
+
+nav a {
+    color: #00120B; /* Mov feminin */
+    text-decoration: none; /* Elimină sublinierea */
+    margin: 0 15px; /* Spațiu între link-uri */
+    font-size: 25px; /* Dimensiunea fontului */
+    font-weight: bold; /* Font îngroșat */
+}
+
+/* Efect la hover pe link-uri */
+nav a:hover {
+    color: #FDECEF; /* Roz mai intens la hover */
+}
+
+
+/* Buton drăguț */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 130px;
+    font-weight: bold;
+    color: #00120B; /* La fel ca backgroundul, devine invizibil inițial */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button:hover {
+    color: #FDECEF; /* Verde mai deschis la hover, să fie vizibil */
+}
+
+
+footer {
+  background-color: #00120B;
+  color: #FDECEF;
+  padding: 20px 0px;
+  text-align: center;
+  font-size: 14px;
+ border-top: 3px solid #FDECEF;
+  margin-top: 20px;
+}
+
+footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin-bottom: 70px; /* distanță egală între rânduri */
+  
+}
+
+footer nav {
+  margin-bottom: 20px; /* distanță egală între rânduri */
+}
+
+footer .social-media {
+  margin-bottom: 10px; /* distanță egală între rânduri */
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer nav li {
+  display: inline-block;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: #FDECEF;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+footer nav a:hover,
+footer .social-media a:hover {
+  color: #9DB17C;
+}
+
+footer .social-media a {
+  color: #FDECEF;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+ain  img{
+    width: 150px; /* Ajustează dimensiunea imaginii */
+    height: 150px; /* Ajustează dimensiunea imaginii */
+    border-radius: 50%; /* Transformă imaginea într-un cerc */
+    border: 5px solid #a64d79; /* Adaugă o margine roz (poți schimba culoarea după preferințe) */
+    object-fit: cover; /* Asigură-te că imaginea se potrivește bine în cerc */
+}
+
+main h1 {
+    font-size: 36px; /* Dimensiunea titlului */
+    margin: 20px 0; /* Spațiu între titlu și conținut */
+    text-align: center;
+}
+main {
+  margin: 0;
+  padding: 0;
+}
+
+ 
+
+
+.gallery {
+  column-count: 4;
+  column-gap: 4mm;
+  padding: 4mm;
+}
+ 
+.img-wrapper {
+  position: relative;
+  margin-bottom: 4mm;
+  break-inside: avoid;
+  cursor: pointer;
+  display: block;
+}
+
+.img-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay alb la hover */
+.img-wrapper:hover::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255,255,255,0.5);
+  pointer-events: none;
+}
+
+/* Ascundem checkbox-urile */
+.modal-toggle {
+  display: none;
+}
+
+/* Fundal modal (apare când checkbox e selectat) */
+.modal-toggle:checked + label + label.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  cursor: pointer;
+  z-index: 999;
+  display: block;
+}
+
+/* Inițial ascuns */
+.modal-backdrop {
+  display: none;
+}
+
+.modal-toggle:checked + label + label.modal-backdrop + .modal-content {
+  position: fixed;
+  top: 0.1cm;
+  bottom: 0.1cm;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90vw;
+  max-height: calc(100vh - 0.2cm); /* 1cm sus + 1cm jos */
+  
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+
+/* Ascunde implicit modal-content */
+.modal-content {
+  display: none;
+}
+
+/* Imaginea mare din modal */
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0;
+  display: block;
+}
+
+/* Butonul de închidere */
+.modal-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1001;
+}

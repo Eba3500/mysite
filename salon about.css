@@ -1,0 +1,203 @@
+
+body {
+    background-color: #00120B; /* Roz pal delicat */
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #FDECEF; /* Mov feminin */
+    
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Aranjează vertical: header, main, footer */
+}
+
+main {
+    flex: 1; /* Umple tot spațiul rămas între header și footer */
+}
+
+
+/* Antet elegant */
+header {
+    display: flex; /* Folosește flexbox pentru a aranja elementele */
+    justify-content: space-between; /* Spațiu între logo și navigație */
+    align-items: center; /* Aliniază elementele pe verticală */
+    background-color: #9DB17C;
+    padding: 5px;
+    border-radius: 50px; /* Ușor mai rotunjit, 110px era prea mult */
+    box-shadow: 0 4px 8px rgba(255, 253, 253, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Logo stilizat */
+.logo {
+    width: 200px; /* Ajustează dimensiunea logo-ului */
+    height: auto; /* Păstrează proporțiile */
+    align-self: flex-start; /* Aliniază logo-ul în partea de sus */
+}
+
+* Bara de navigație */
+nav {
+    display: flex;
+    justify-content: center; /* Centrează elementele de navigare */
+    align-items: center;
+}
+
+nav a {
+    color: #00120B; /* Mov feminin */
+    text-decoration: none; /* Elimină sublinierea */
+    margin: 0 15px; /* Spațiu între link-uri */
+    font-size: 25px; /* Dimensiunea fontului */
+    font-weight: bold; /* Font îngroșat */
+}
+
+/* Efect la hover pe link-uri */
+nav a:hover {
+    color: #FDECEF; /* Roz mai intens la hover */
+}
+
+
+/* Buton drăguț */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 130px;
+    font-weight: bold;
+    color: #00120B; /* La fel ca backgroundul, devine invizibil inițial */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button:hover {
+    color: #FDECEF; /* Verde mai deschis la hover, să fie vizibil */
+}
+
+
+
+
+
+
+ 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-image: url(background7.jpeg) ;
+  background: size 1200px ;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+
+
+.about-row .text {
+  flex: 1 1 400px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #FDECEF;
+  border: 5px solid #9DB17C;
+  background: rgba(0, 0, 0, 0.363);
+  margin-left: 100px;
+  padding: 15px;
+  
+}
+
+.about-row .image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-row .image img {
+  width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #9DB17C;
+    flex-shrink: 0; /* Nu micșora poza */
+    margin-bottom: 40px;
+}
+
+
+  .about-row.reverse .text {
+    order: 2;
+  }
+
+  .about-row.reverse .image {
+    order: 1;
+  }
+
+
+footer {
+  background-color: #00120B;
+  color: #FDECEF;
+  padding: 20px 0px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 3px solid #FDECEF;
+  margin-top: 20px;
+
+}
+
+footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin-bottom: 70px; /* distanță egală între rânduri */
+  
+}
+
+footer nav {
+  margin-bottom: 20px; /* distanță egală între rânduri */
+}
+
+footer .social-media {
+  margin-bottom: 10px; /* distanță egală între rânduri */
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer nav li {
+  display: inline-block;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: #FDECEF;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+footer nav a:hover,
+footer .social-media a:hover {
+  color: #9DB17C;
+}
+
+footer .social-media a {
+  color: #FDECEF;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
